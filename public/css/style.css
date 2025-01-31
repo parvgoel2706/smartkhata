@@ -109,31 +109,30 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* gap:5%; */
 }
 .user-detail {
   border-radius: 100px 500px 500px 100px;
   align-self: flex-start;
   text-align: end;
-  background-image: linear-gradient(rgb(0, 0, 0), #3966fa, rgb(137, 137, 132));
+  background-image: linear-gradient(rgb(0, 0, 0), #96aaed, rgb(137, 137, 132));
+  box-shadow: 5px 5px 8px black;
   background-size: 110% 200px;
   background-position: 35% 50%;
-  background-repeat: no-repeat;
 }
 .transaction {
   align-self: flex-end;
   border-radius: 500px 100px 100px 500px;
   text-align: start;
-  background-image: linear-gradient(rgb(0, 0, 0), #3966fa, rgb(137, 137, 132));
+  background-image: linear-gradient(rgb(0, 0, 0), #96aaed, rgb(137, 137, 132));
+  box-shadow: -5px 5px 8px black;
   background-size: 110% 200px;
   background-position: 35% 50%;
-  background-repeat: no-repeat;
-  background-repeat: no-repeat;
 }
 .transaction-history {
   text-align: end;
   align-self: flex-start;
-  background-image: linear-gradient(rgb(0, 0, 0), #3966fa, rgb(137, 137, 132));
+  background-image: linear-gradient(rgb(0, 0, 0), #96aaed, rgb(137, 137, 132));
+  box-shadow: 5px 5px 8px black;
   background-size: 110% 200px;
   background-position: 35% 50%;
   background-repeat: no-repeat;
