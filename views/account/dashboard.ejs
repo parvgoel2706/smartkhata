@@ -1,0 +1,21 @@
+<%-layout("./layout/boilerplate.ejs")%>
+<div class="dashboard-container">
+  <div class="user-detail feature <%=classLeft%>">
+    <a class="<%=classText%>" href="/account/details"
+      ><p class="option option-left">ACCOUNT DETAILS</p></a
+    >
+  </div>
+  <div class="transaction feature <%=classRight%>">
+    <a class="<%=classText%>" href="/account/transaction"
+      ><p class="option option-right">TRANSACTION</p></a
+    >
+  </div>
+  <div class="transaction-history feature <%=classLeft%>">
+    <a class="<%=classText%>" href="/account/transaction_history">
+      <p class="option option-left">TRANSACTION HISTORY</p>
+    </a>
+  </div>
+</div>
+<% if(typeof body !== "undefined"){%>
+<div class="dialogbox"><%-body %></div>
+<%} %>

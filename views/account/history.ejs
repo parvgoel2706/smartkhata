@@ -1,0 +1,56 @@
+<%-layout("/account/dashboard.ejs")%>
+<div class="diag-history">
+  <table class="table">
+    <tr class="t-header">
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Available Balance</th>
+      <th>Type</th>
+    </tr>
+    <%for (transaction of result.reverse()){%>
+    <tr>
+      <%if(transaction.transactionType === "Deposit"){%>
+      <td style="background-color: rgb(62, 203, 62)">
+        <%=transaction.transactionTime.toLocaleString("en-In")%>
+      </td>
+      <td style="background-color: rgb(62, 203, 62)">
+        <%=transaction.amount%>
+      </td>
+      <td style="background-color: rgb(62, 203, 62)">
+        <%=transaction.balRemains %>
+      </td>
+      <td style="background-color: rgb(62, 203, 62)">
+        <%=transaction.transactionType%>
+      </td>
+      <%}else{%>
+      <td style="background-color: rgb(240, 71, 71)">
+        <%=transaction.transactionTime.toLocaleString("en-In")%>
+      </td>
+      <td style="background-color: rgb(240, 71, 71)">
+        <%=transaction.amount%>
+      </td>
+      <td style="background-color: rgb(240, 71, 71)">
+        <%=transaction.balRemains %>
+      </td>
+      <td style="background-color: rgb(240, 71, 71)">
+        <%=transaction.transactionType%>
+      </td>
+      <%}%>
+    </tr>
+    <%}%>
+    <tfoot>
+      <tr>
+        <td>
+          <div class="card-body">
+            <form action="/account/dashboard">
+              <button class="btn btn-danger">Back</button>
+            </form>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

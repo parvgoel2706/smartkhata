@@ -1,0 +1,35 @@
+<%-layout("/account/dashboard.ejs")%>
+<div class="diag-amount">
+  <div class="trans-exit">
+    <form action="/account/dashboard">
+      <button><i class="fa-solid fa-xmark"></i></button>
+    </form>
+  </div>
+  <form class="needs-validation" novalidate>
+    <div class="mb-3 text-center">
+      <label for="amount" class="form-label"><h2>Enter Amount</h2></label>
+      <input type="number" class="form-control" id="amount" name="amount" required/>
+      <div class="invalid-feedback">Please enter a require amount</div>
+    </div>
+    <div>
+      <button
+        type="submit"
+        formaction="/account/transaction/deposit"
+        formmethod="post"
+        Deposit
+        class="btn btn-success trans-type"
+      >
+        DEPOSIT
+      </button>
+      <br />
+      <button
+        type="submit"
+        formaction="/account/transaction/withdraw"
+        formmethod="post"
+        class="btn btn-danger trans-type"
+      >
+        WITHDRAW
+      </button>
+    </div>
+  </form>
+</div>

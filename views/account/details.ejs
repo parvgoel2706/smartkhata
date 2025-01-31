@@ -1,0 +1,31 @@
+<%-layout("/account/dashboard.ejs")%>
+<div class="diag-detail">
+  <div class="card" style="width: calc(200px + 10vw)">
+    <img
+      class="card-img-top"
+      style="width: 12vw; margin: 0 auto"
+      src="/images/user.png
+    "
+      alt="user"
+    />
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name :-&nbsp;&nbsp; <%=user.name%></li>
+      <li class="list-group-item">
+        DOB:-&nbsp;&nbsp; <%=user.birthDate.toLocaleDateString("en-In")%>
+      </li>
+      <li class="list-group-item">
+        Age:-&nbsp;&nbsp; <%= new Date(Date.now()).getFullYear() -
+        user.birthDate.getFullYear()%>
+      </li>
+      <li class="list-group-item">username:-&nbsp;&nbsp; <%=user.username%></li>
+      <li class="list-group-item">
+        Account Balance:-&nbsp;&nbsp; &#8377; &nbsp;<%=user.currBal%>
+      </li>
+    </ul>
+    <div class="card-body">
+      <form action="/account/dashboard">
+        <button class="btn btn-danger">Back</button>
+      </form>
+    </div>
+  </div>
+</div>

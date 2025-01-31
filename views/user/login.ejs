@@ -1,0 +1,54 @@
+<%layout("./user/home.ejs")%>
+<div class="form">
+  <h3 class="mb-3 mt-5 col-6 offset-5 text-center">Login</h3>
+
+  <div class="col-6 offset-5 text-center">
+    <ul class="nav nav-tabs col-6 offset-3">
+      <li class="nav-item col-6 text-center">
+        <a class="nav-link bg-dark-subtle " href="/signup"
+          >Signup</a
+        >
+      </li>
+      <li class="nav-item col-6 text-center">
+        <a
+          class="nav-link active bg-primary text-warning"
+          href="/login"
+          >Login</a
+        >
+      </li>
+    </ul>
+
+    <form
+      action="/login"
+      method="POST"
+      novalidate
+      class="needs-validation mt-3 text-center"
+    >
+      <div class="mb-3 mt-2">
+        <label for="username" class="form-label">Username:-</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Enter username"
+          required
+        />
+        <div class="invalid-feedback">Required field</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:-</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          placeholder="Enter password"
+          required
+        />
+        <div class="invalid-feedback">Required field</div>
+      </div>
+      <button class="btn btn-warning mt-2">Login</button>
+    </form>
+  </div>
+</div>

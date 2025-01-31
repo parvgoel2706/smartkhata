@@ -1,0 +1,38 @@
+
+<nav class="navbar sticky-top navbar-expand-md bg-light border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/account/dashboard">
+      <img
+        src="https://play-lh.googleusercontent.com/VQ_u0dx6-vecibWOAnRY50RjbAoxMEsDeMspUXExe8gbEoRkvgaQSB46NM_v_vM2O0Y=w240-h480-rw"
+        alt="Logo"
+        width="35px"
+        height="40px"
+        class="d-inline-block me-1"
+      />
+      SmartKhata
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="navbar-nav">
+        <% if (user) { %>
+        <a class="nav-link" href="/logout"><b>Logout</b></a>
+        <% } else { %>
+        <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+        <a class="nav-link" href="/login"><b>Log In</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
