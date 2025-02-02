@@ -1,6 +1,7 @@
 <%-layout("/account/dashboard.ejs")%>
 <div class="diag-history">
   <table class="table">
+    <%if(result.length){%>
     <tr class="t-header">
       <th>Date</th>
       <th>Amount</th>
@@ -36,6 +37,15 @@
         <%=transaction.transactionType%>
       </td>
       <%}%>
+    </tr>
+    <%}%> <% }else{ %>
+    <tr>
+      <td>
+        <h3 class="text-center">No transaction records found</h3>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <%}%>
     <tfoot>
