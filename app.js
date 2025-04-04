@@ -19,8 +19,8 @@ const userRouter = require("./route/user.js");
 const accountRouter = require("./route/account.js");
 const port = 8080;
 
-let dbURL = `mongodb+srv://${process.env.ATLASDB_USER}:${process.env.ATLASDB_PASSWORD}@cluster0.5ftfw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-
+let dbURL = `mongodb+srv://${process.env.ATLASDB_USER}:${process.env.ATLASDB_PASSWORD}@cluster0.5ftfw.mongodb.net/smartkhata?retryWrites=true&w=majority&appName=Cluster0`;
+// let dbURL = "mongodb://127.0.0.1:27017/smartkhata";
 main()
   .then(() => console.log("successfully connected to database"))
   .catch((err) => console.log(err));
