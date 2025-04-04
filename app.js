@@ -82,10 +82,6 @@ app.use(methodOverride("_method"));
 app.use("/account", accountRouter);
 app.use("/", userRouter);
 
-app.get("/", (req, res) => {
-  res.render("account/test.ejs");
-});
-
 app.all("*", (req, res, next) => {
   throw new ExpressError(404, "Page not found");
 });
